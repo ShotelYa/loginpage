@@ -6,60 +6,79 @@
 <title>Property Management</title>
 
 <style>
-    body {
+    * {
+        box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background: #f4f6f9;
-        color: #333;
-        text-align: center;
     }
-    .container {
-        max-width: 350px;
-        margin: 40px auto;
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        /* Фон со зданиями */
+        background-image: url("https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&w=1600&q=80");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #ffffff;
+    }
+
+    /* Полупрозрачный тёмный слой, чтобы текст был читаем */
+    .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
         padding: 20px;
     }
-    .logo {
-        width: 180px;
-        margin-bottom: 20px;
+
+    .content {
+        max-width: 480px;
     }
+
     h1 {
-        font-size: 22px;
+        font-size: 26px;
         font-weight: bold;
-        color: #2a6f97;
-        margin-bottom: 10px;
+        margin-bottom: 14px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
     }
+
     p {
         font-size: 15px;
-        line-height: 1.6;
-        opacity: 0.85;
+        line-height: 1.7;
+        margin-bottom: 10px;
+        opacity: 0.95;
     }
+
     .footer {
-        margin-top: 35px;
+        margin-top: 28px;
         font-size: 13px;
-        color: #666;
-        opacity: 0.7;
+        opacity: 0.8;
     }
 </style>
 </head>
 
 <body>
-    <div class="container">
-        
-
-        <h1>Property Management Portal</h1>
-
-        <p>
-            Welcome to the centralized platform for managing buildings, 
-            apartments, payments, and projects.  
-        </p>
-        <p>
-            Sign in on the left to access your dashboard, submit updates, 
-            review property data, and collaborate with your team.
-        </p>
-
-        <div class="footer">
-            Powered by Salesforce • Secure Access
+    <div class="overlay">
+        <div class="content">
+            <h1>Property Management Portal</h1>
+            <p>
+                Welcome to your centralized workspace for managing buildings,
+                apartments, payments, and projects in one secure Salesforce app.
+            </p>
+            <p>
+                Use the login panel to access real-time property data,
+                track activities, and collaborate with your team from anywhere.
+            </p>
+            <div class="footer">
+                Powered by Salesforce • Secure Access
+            </div>
         </div>
     </div>
 </body>
